@@ -1,7 +1,7 @@
 FROM gcr.io/kaggle-gpu-images/python:v141
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV TZ=Asia/Tokyo
+ENV TZ=Asia/Seoul
 
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV LD_LIBRARY_PATH=/usr/local/cuda/lib64
@@ -9,7 +9,7 @@ EXPOSE 9001
 EXPOSE 8888
 
 
-RUN pip install japanize-matplotlib mlflow logzero timm pandarallel optuna gdown lap
+RUN pip install koreanize-matplotlib mlflow logzero timm pandarallel optuna gdown lap
 
 RUN pip install pandas==1.5.2 keplergl==0.3.2 mkl fancyimpute
 RUN cp /opt/conda/pkgs/mkl-2023.1.0-h213fc3f_46344/lib/libmk* /usr/local/cuda/lib64
